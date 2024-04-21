@@ -25,4 +25,4 @@ jobs:
       run: find . -name '*.sln' -exec dotnet build --configuration Release {} +
 
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal BackgroundJob.Test/BackgroundJob.Test.csproj
