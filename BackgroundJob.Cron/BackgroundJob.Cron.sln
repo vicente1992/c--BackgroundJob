@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackgroundJob.Cron", "BackgroundJob.Cron.csproj", "{EEF7D006-8225-4C51-9A91-50BC659F79F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundJob.Test", "..\BackgroundJob.Test\BackgroundJob.Test.csproj", "{93BB3516-A55E-479C-B635-546B93CD62E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEF7D006-8225-4C51-9A91-50BC659F79F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEF7D006-8225-4C51-9A91-50BC659F79F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF7D006-8225-4C51-9A91-50BC659F79F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEF7D006-8225-4C51-9A91-50BC659F79F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93BB3516-A55E-479C-B635-546B93CD62E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93BB3516-A55E-479C-B635-546B93CD62E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93BB3516-A55E-479C-B635-546B93CD62E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93BB3516-A55E-479C-B635-546B93CD62E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3021AF53-B87B-464D-9857-E10469E505E1}
+	EndGlobalSection
+EndGlobal
