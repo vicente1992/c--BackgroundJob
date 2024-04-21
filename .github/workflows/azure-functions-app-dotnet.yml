@@ -19,10 +19,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '8.0'  
-
-    - name: Restore dependencies
-      run: dotnet restore
+        dotnet-version: '8.0'   
 
     - name: Build
       run: find . -name '*.sln' -exec dotnet build --configuration Release {} +
