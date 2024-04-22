@@ -34,6 +34,9 @@ jobs:
       run: dotnet tool install dotnet-stryker --tool-path bin/tools
     - name: Give execute permissions to dotnet-stryker
       run: chmod +x ./bin/tools/dotnet-stryker
+    - name: Find project files
+      run: find . -name '*/[Tt]est*/*.csproj'
+      id: find_proj_files
     - name: Run dotnet-stryker
       run: |
            find . -name '*/[Tt]est*/*.csproj' ./bin/tools/dotnet-stryker --reporter html,json --dashboard-api-key 6a363c63-9561-46ff-8d29-ac2c81d86160
