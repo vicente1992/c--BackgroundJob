@@ -38,13 +38,6 @@ jobs:
     - name: Run Stryker Mutator
       run: dotnet stryker
       working-directory: ${{ github.workspace }}/BackgroundJob.Test 
-    - name: Upload Stryker report
-      uses: actions/upload-artifact@v2
-      with:
-       name: stryker-report
-       path: /home/runner/work/c--BackgroundJob/c--BackgroundJob/BackgroundJob.Test/StrykerOutput/2024-04-22.23-14-45/reports/mutation-report.html
-       
- 
         
           
        
