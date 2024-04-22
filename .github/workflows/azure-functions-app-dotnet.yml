@@ -36,7 +36,7 @@ jobs:
       run: dotnet tool install -g dotnet-stryker
 
     - name: Run Stryker Mutator
-      run: dotnet stryker
+      run: dotnet stryker --dashboard-api-key 548452cb-11eb-4de4-92fe-aa7a1c8d557e
       working-directory: ${{ github.workspace }}/BackgroundJob.Test
        
  
