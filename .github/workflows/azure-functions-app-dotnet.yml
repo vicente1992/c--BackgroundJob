@@ -25,7 +25,11 @@ jobs:
       run: find . -name '*.sln' -exec dotnet build --configuration Release {} +
 
     - name: Test 
-      run: find . -name '*/[Tt]est*/*.csproj' dotnet test  --configuration Release  {} +
+      run: |
+          find . -name '*/[Tt]est*/*.csproj' -exec dotnet test --configuration Release {} +
+      working-directory: ${{ github.workspace }}
+      env:
+          DOTNET_CLI_TELEMETRY_OPTOUT: true
  
          
       #projects: '*/[Tt]est*/*.csproj'
