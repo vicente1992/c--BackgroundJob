@@ -30,10 +30,12 @@ jobs:
       working-directory: ${{ github.workspace }}
       env:
           DOTNET_CLI_TELEMETRY_OPTOUT: true
+    - name: Install dotnet-stryker
+      run: dotnet tool install dotnet-stryker --tool-path $(Agent.ToolsDirectory)/dotnet
 
     - name: Run dotnet-stryker
       run: |
-           $(Agent.BuildDirectory)/tools/dotnet-stryker --reporters html,json
+           $(Agent.ToolsDirectory)/tools/dotnet-stryker --reporters html,json
       working-directory: BackgroundJob.Test
  
           
