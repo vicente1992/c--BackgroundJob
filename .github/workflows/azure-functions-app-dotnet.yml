@@ -32,8 +32,8 @@ jobs:
           DOTNET_CLI_TELEMETRY_OPTOUT: true
     - name: Install dotnet-stryker
       run: dotnet tool install dotnet-stryker --tool-path bin/tools
-    - name: List contents of bin/tools
-      run: ls -l bin/tools
+    - name: Give execute permissions to dotnet-stryker
+      run: chmod +x ./bin/tools/dotnet-stryker
     - name: Run dotnet-stryker
       run: |
            ./bin/tools/dotnet-stryker --reporters html,json
