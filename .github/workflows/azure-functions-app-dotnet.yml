@@ -33,7 +33,7 @@ jobs:
           
     - name: Install dotnet-stryker
       run: dotnet tool install dotnet-stryker --tool-path bin/tools
-      working-directory: ${{ github.workspace }}/BackgroundJob.Test
+      working-directory: ${{ github.workspace }}
    
       
     - name: Run dotnet-stryker
