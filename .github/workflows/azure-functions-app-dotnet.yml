@@ -43,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: mutation-report
-        path: ./StrykerOutput/*/reports/mutation-report.html
+        path: ${{ github.workspace }}/BackgroundJob.Test/StrykerOutput/*/reports/mutation-report.html
       
         
           
