@@ -36,7 +36,7 @@ jobs:
       run: dotnet tool install -g dotnet-stryker
 
     - name: Run Stryker Mutator
-      run: dotnet stryker --reporter html,json --dashboard-api-key 6a363c63-9561-46ff-8d29-ac2c81d86160
+      run: dotnet stryker  
       working-directory: ${{ github.workspace }}/BackgroundJob.Test 
 
     - name: Upload mutation report artifact
