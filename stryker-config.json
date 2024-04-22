@@ -4,7 +4,8 @@
       "progress",
       "html"
     ],
-    "projectName": "BackgroundJob.Cron",
+
+  },
+      "projectName": "BackgroundJob.Cron",
     "projectVersion": "1.0.0"
-  }
 }
