@@ -39,7 +39,8 @@ jobs:
       id: find_proj_files
     - name: Run dotnet-stryker
       run: |
-           ./bin/tools/dotnet-stryker --reporter html,json --dashboard-api-key 6a363c63-9561-46ff-8d29-ac2c81d86160
+            cd ${{ github.workspace }}/BackgroundJob.Test
+            ./bin/tools/dotnet-stryker --reporter html,json --dashboard-api-key 6a363c63-9561-46ff-8d29-ac2c81d86160
       #working-directory: ${{ github.workspace }}/BackgroundJob.Test
           
        
