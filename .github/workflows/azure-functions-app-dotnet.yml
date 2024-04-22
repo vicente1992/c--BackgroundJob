@@ -36,7 +36,7 @@ jobs:
       run: chmod +x ./bin/tools/dotnet-stryker
     - name: Run dotnet-stryker
       run: |
-           ./bin/tools/dotnet-stryker --reporter html,json
+           ./bin/tools/dotnet-stryker --reporter html,json --dashboardApiKey 6a363c63-9561-46ff-8d29-ac2c81d86160
       working-directory: ${{ github.workspace }}
           
        
