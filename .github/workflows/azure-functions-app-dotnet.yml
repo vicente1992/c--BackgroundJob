@@ -37,7 +37,7 @@ jobs:
 
     - name: Run Stryker Mutator
       run: dotnet stryker
-      working-directory: ${{ github.workspace }}/BackgroundJob.Test
+      working-directory: ${{ github.workspace }}/BackgroundJob.Test 
        
  
         
