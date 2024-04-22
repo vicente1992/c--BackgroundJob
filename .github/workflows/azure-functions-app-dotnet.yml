@@ -24,5 +24,10 @@ jobs:
     - name: Build
       run: find . -name '*.sln' -exec dotnet build --configuration Release {} +
 
-    - name: Test
-      run: dotnet test --verbosity normal BackgroundJob.Test/bin/Debug/net8.0/BackgroundJob.Test.dll
+    - name: Test 
+      run: find . -name '*/[Tt]est*/*.csproj' dotnet test  --configuration Release  {} +
+ 
+         
+      #projects: '*/[Tt]est*/*.csproj'
+       
+
