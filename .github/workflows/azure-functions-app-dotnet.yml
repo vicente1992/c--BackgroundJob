@@ -30,22 +30,25 @@ jobs:
       working-directory: ${{ github.workspace }}
       env:
           DOTNET_CLI_TELEMETRY_OPTOUT: true
+          
     - name: Install dotnet-stryker
       run: dotnet tool install dotnet-stryker --tool-path bin/tools
+      
     - name: Give execute permissions to dotnet-stryker
       run: chmod +x ./bin/tools/dotnet-stryker
+      
     - name: Find project files
       run: find . -name '*/[Tt]est*/*.csproj'
       id: find_proj_files
+      
     - name: Run dotnet-stryker
       run: |
-             cd ${{ github.workspace }}/BackgroundJob.Test
-              if [ -f ./bin/tools/dotnet-stryker ]; then
-              ./bin/tools/dotnet-stryker --reporter html,json --dashboard-api-key 6a363c63-9561-46ff-8d29-ac2c81d86160
-              else
-             echo "dotnet-stryker not found in the expected location"
-             fi
-      #working-directory: ${{ github.workspace }}/BackgroundJob.Test
+        cd ${{ github.workspace }}/BackgroundJob.Test
+        if [ -f ./bin/tools/dotnet-stryker ]; then
+        ./bin/tools/dotnet-stryker --reporter html,json --dashboard-api-key 6a363c63-9561-46ff-8d29-ac2c81d86160
+        else
+        echo "dotnet-stryker not found in the expected location"
+        fi
           
        
 
