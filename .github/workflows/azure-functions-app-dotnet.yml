@@ -30,8 +30,12 @@ jobs:
       working-directory: ${{ github.workspace }}
       env:
           DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+    - name: Run dotnet-stryker
+      run: |
+           $(Agent.BuildDirectory)/tools/dotnet-stryker --reporters html,json
+      working-directory: BackgroundJob.Test
  
-         
-      #projects: '*/[Tt]est*/*.csproj'
+          
        
 
