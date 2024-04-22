@@ -30,10 +30,7 @@ jobs:
       working-directory: ${{ github.workspace }}
       env:
           DOTNET_CLI_TELEMETRY_OPTOUT: true 
-          
-    # - name: Install dotnet-stryker
-    #   run: dotnet tool install dotnet-stryker --tool-path bin/tools
-    #   working-directory: ${{ github.workspace }}/BackgroundJob.Test
+           
    
     - name: Install Stryker Mutator
       run: dotnet tool install -g dotnet-stryker
@@ -41,12 +38,7 @@ jobs:
     - name: Run Stryker Mutator
       run: dotnet stryker
       working-directory: ${{ github.workspace }}/BackgroundJob.Test
-      
-    # - name: Run dotnet-stryker
-    #   run: | 
-    #     ./bin/tools/dotnet-stryker --reporter html,json --dashboard-api-key 6a363c63-9561-46ff-8d29-ac2c81d86160
-    #   working-directory: ${{ github.workspace }}/BackgroundJob.Test
- 
+       
  
         
           
