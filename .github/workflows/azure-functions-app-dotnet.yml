@@ -36,7 +36,7 @@ jobs:
       run: chmod +x ./bin/tools/dotnet-stryker
     - name: Run dotnet-stryker
       run: |
-           ./bin/tools/dotnet-stryker --reporters html,json
+           ./bin/tools/dotnet-stryker --reporter html,json
       working-directory: ${{ github.workspace }}
  
           
