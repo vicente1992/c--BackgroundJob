@@ -37,8 +37,7 @@ jobs:
     - name: Run dotnet-stryker
       run: |
            ./bin/tools/dotnet-stryker --reporter html,json
-      working-directory: ${{ github.workspace }}/BackgroundJob.Test
- 
+      working-directory: ${{ github.workspace }}
           
        
 
