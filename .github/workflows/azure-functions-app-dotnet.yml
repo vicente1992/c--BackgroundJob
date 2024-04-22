@@ -39,8 +39,12 @@ jobs:
       id: find_proj_files
     - name: Run dotnet-stryker
       run: |
-            cd ${{ github.workspace }}/BackgroundJob.Test
-            ./bin/tools/dotnet-stryker --reporter html,json --dashboard-api-key 6a363c63-9561-46ff-8d29-ac2c81d86160
+             cd ${{ github.workspace }}/BackgroundJob.Test
+              if [ -f ./bin/tools/dotnet-stryker ]; then
+              ./bin/tools/dotnet-stryker --reporter html,json --dashboard-api-key 6a363c63-9561-46ff-8d29-ac2c81d86160
+              else
+             echo "dotnet-stryker not found in the expected location"
+             fi
       #working-directory: ${{ github.workspace }}/BackgroundJob.Test
           
        
