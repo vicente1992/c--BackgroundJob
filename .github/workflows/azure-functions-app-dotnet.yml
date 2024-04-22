@@ -31,11 +31,11 @@ jobs:
       env:
           DOTNET_CLI_TELEMETRY_OPTOUT: true
     - name: Install dotnet-stryker
-      run: dotnet tool install dotnet-stryker --tool-path $(Agent.ToolsDirectory)/dotnet
+      run: dotnet tool install dotnet-stryker --tool-path ${{ env.RUNNER_TOOL_CACHE }}/dotnet
 
     - name: Run dotnet-stryker
       run: |
-           $(Agent.ToolsDirectory)/tools/dotnet-stryker --reporters html,json
+           ${{ env.RUNNER_TOOL_CACHE }}/dotnet/dotnet-stryker --reporters html,json
       working-directory: BackgroundJob.Test
  
           
