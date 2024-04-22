@@ -35,7 +35,7 @@ jobs:
 
     - name: Run dotnet-stryker
       run: |
-           ${{ env.RUNNER_TOOL_CACHE }}/dotnet/dotnet-stryker --reporters html,json
+           bin/tools/dotnet-stryker --reporters html,json
       working-directory: BackgroundJob.Test
  
           
