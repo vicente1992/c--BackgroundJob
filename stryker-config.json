@@ -3,9 +3,8 @@
     "reporters": [
       "progress",
       "html"
-    ],
-
+    ]
   },
-      "projectName": "BackgroundJob.Cron",
-    "projectVersion": "1.0.0"
+  "projectName": "BackgroundJob.Cron",
+  "projectVersion": "1.0.0"
 }
