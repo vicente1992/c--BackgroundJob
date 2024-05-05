@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using BackgroundJob.Cron;
+﻿using BackgroundJob.Cron;
 using BackgroundJob.Cron.Jobs;
 using Moq;
 

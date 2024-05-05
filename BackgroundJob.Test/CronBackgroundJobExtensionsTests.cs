@@ -12,7 +12,7 @@ public class CronBackgroundJobExtensionsTests
     var services = new ServiceCollection();
 
     // Act & Assert
-    Assert.Throws<ArgumentNullException>(() => services.AddCronJob<MySchedulerJob>(null));
+    Assert.Throws<ArgumentNullException>(() => services.AddCronJob<MySchedulerJob>(config =>{}));
 
   }
 
